@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]" parallel="tests">
+  <test thread-count="2" name="Chrome Test(failed)" parallel="tests">
+    <parameter name="password" value="t3stf1rst"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="username" value="odobbs"/>
+    <classes>
+      <class name="com.qa.tests.LoginPageTest">
+        <methods>
+          <include name="validateLoginPageTitle"/>
+          <include name="validateNext"/>
+          <include name="initalization"/>
+        </methods>
+      </class> <!-- com.qa.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+  <test thread-count="2" name="Firefox Test(failed)" parallel="tests">
+    <parameter name="password" value="t3stf1rst"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="username" value="yan"/>
+    <classes>
+      <class name="com.qa.tests.LoginPageTest">
+        <methods>
+          <include name="validateLoginPageTitle"/>
+          <include name="validateNext"/>
+          <include name="initalization"/>
+        </methods>
+      </class> <!-- com.qa.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- Firefox Test(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->
